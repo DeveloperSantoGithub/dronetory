@@ -1,0 +1,111 @@
+// Fonts Import start:
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Fonts Import end.
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	// background: #17181a;
+	background: radial-gradient(ellipse at bottom, #17181a 25%, #000000 100%);
+}
+
+header {
+	width: 90%;
+	min-height: 10vh;
+
+	margin: auto;
+	padding: 2rem 0rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	color: #fff;
+
+	#logo {
+		font-family: 'Poiret One', cursive;
+		font-size: 3rem;
+		font-weight: 600;
+
+		text-decoration: none;
+		letter-spacing: 1rem;
+		color: #fff;
+	}
+
+	.burger-nav {
+		pointer-events: none;
+
+		.line1 {
+			width: 3rem;
+			height: 0.2rem;
+
+			margin: 0.4rem;
+			background: #fff;
+		}
+		.line2 {
+			width: 2.2rem;
+			height: 0.2rem;
+
+			margin: 0.4rem;
+			background: #fff;
+		}
+		.line3 {
+			width: 1.5rem;
+			height: 0.2rem;
+
+			margin: 0.4rem;
+			background: #fff;
+		}
+	}
+}
+
+// Slider section:
+.slide {
+	width: 90%;
+	height: 100vh;
+
+	margin: 0 auto 0 auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	background: #000;
+	color: #fff;
+
+	.hero-description {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		flex: 1;
+		flex-basis: 25rem;
+		padding-left: 5rem;
+		position: relative;
+
+		padding-left: 5rem;
+	}
+
+	.hero-img {
+		flex: 1;
+		flex-basis: 25rem;
+		position: relative;
+		img {
+			width: 50%;
+			height: 60%;
+
+			object-fit: cover;
+		}
+	}
+}
