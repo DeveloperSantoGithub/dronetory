@@ -53,13 +53,15 @@ function animateSliders() {
 			.addTo(controller);
 
 		//-->> Page Animations Part:
-		//Create Page Timeline:
+
+		// Create page Timeline:
 		const pageTimeline = gsap.timeline();
 
-		//Create animations:
+		// Create Animations:
 
-		// Checking condition for set sliders scrolling delay:
-		let nextSlider = sliders.length - 1 === index ? 'end' : sliders[index + 1];
+		// Checking condition to set sliders scrolling delay:
+		let nextSlider =
+			sliders.length - 1 === index ? 'stopScrolling' : sliders[index + 1];
 
 		pageTimeline.fromTo(nextSlider, { y: '0%' }, { y: '50%' });
 		pageTimeline.fromTo(
@@ -67,9 +69,9 @@ function animateSliders() {
 			{ opacity: 1, scale: 1 },
 			{ opacity: 0, scale: 0.5 }
 		);
-		pageTimeline.fromTo(nextSlider, { y: '50%' }, { y: '0%' }, '-=0.5');
+		pageTimeline.fromTo(nextSlider, { y: '50%' }, { y: '0%' }, '-= 0.5');
 
-		//Let's Create Page Scene:
+		// Create Page Scene:
 		pageScene = new ScrollMagic.Scene({
 			triggerElement: slider,
 			duration: '100%',

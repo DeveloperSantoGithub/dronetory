@@ -226,11 +226,19 @@ header .burger-nav .line3 {
 }
 
 .cursor {
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  position: absolute;
+  pointer-events: none;
+}
+
+.cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+.cursor__ball circle {
+  fill: #f7f8fa;
 }
 
 .scrollmagic-pin-spacer {

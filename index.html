@@ -19,11 +19,11 @@
 	<body>
 		<header class="nav-header">
 			<!-- Logo start -->
-			<h1><a href="./index.html" id="logo">dronetory</a></h1>
+			<h1><a href="./index.html" id="logo" class="hoverable">dronetory</a></h1>
 			<!-- Logo end -->
 
 			<!-- Hamburger (3 bar) navbar start -->
-			<div class="burger-nav">
+			<div class="burger-nav hoverable">
 				<div class="line1"></div>
 				<div class="line2"></div>
 				<div class="line3"></div>
@@ -51,7 +51,7 @@
 						Drone videography covers areas with impossible perspectives while
 						helping improve the video quality.
 					</p>
-					<a class="explore first-exp">Explore</a>
+					<a class="explore first-exp hoverable">Explore</a>
 					<div class="reveal-text"></div>
 				</div>
 			</section>
@@ -77,7 +77,7 @@
 						platforms to place your audience in your story, at a level beyond
 						the average.
 					</p>
-					<a class="explore second-exp">Explore</a>
+					<a class="explore second-exp hoverable">Explore</a>
 					<div class="reveal-text"></div>
 				</div>
 			</section>
@@ -99,7 +99,7 @@
 						No matter how fast life moves, the world has a way of standing still
 						— the perfect moment for an epic drone shot.
 					</p>
-					<a class="explore third-exp">Explore</a>
+					<a class="explore third-exp hoverable">Explore</a>
 					<div class="reveal-text"></div>
 				</div>
 			</section>
@@ -127,7 +127,17 @@
 
 		<!-- Cursor div start  -->
 		<div class="cursor">
-			<span class="cursor-text"></span>
+			<div class="cursor__ball cursor__bigBall">
+				<svg height="50" width="50">
+					<circle cx="15" cy="15" r="16" stroke-width="0"></circle>
+				</svg>
+			</div>
+
+			<div class="cursor__ball cursor__smallBall">
+				<svg height="15" width="15">
+					<circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+				</svg>
+			</div>
 		</div>
 		<!-- Cursor div end  -->
 
@@ -172,6 +182,15 @@
 			referrerpolicy="no-referrer"
 		></script>
 		<!-- Gsap Original end  -->
+
+		<!-- Babel JS start  -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.6/babel.min.js"
+			integrity="sha512-hBXPfNiOYaPUeKTCOcEXWa1pe3l2Yz7nEolIA7lXkvwu+wgEU6OIJFz1+h3NAiaF1qmWu8dTPmXBY0A0qQTaGw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- Babel JS end  -->
 
 		<!-- JS sheet start  -->
 		<script src="./script/main.js"></script>
