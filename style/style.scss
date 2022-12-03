@@ -38,6 +38,9 @@ header {
 
 	color: #fff;
 
+	z-index: 2;
+	position: relative;
+
 	#logo {
 		font-family: 'Poiret One', cursive;
 		font-size: 3rem;
@@ -49,7 +52,17 @@ header {
 	}
 
 	.burger-nav {
-		pointer-events: none;
+		pointer-events: all;
+		width: 6rem;
+		height: 6rem;
+
+		padding-left: 0.8rem;
+		border-radius: 50%;
+
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
 
 		.line1 {
 			width: 3rem;
@@ -131,7 +144,7 @@ header {
 				position: absolute;
 
 				mix-blend-mode: darken;
-				transform: translateY(100%);
+				transform: translateY(120%) rotate(-5deg) scale(2);
 			}
 			.t-swipe1 {
 				background-color: #5639bf;
@@ -204,7 +217,7 @@ header {
 	top: 0;
 	left: 0;
 
-	background: #fff;
+	background: #e8b95f;
 
 	display: flex;
 	align-items: center;
@@ -256,7 +269,7 @@ header {
 
 	mix-blend-mode: difference;
 
-	z-index: 1;
+	z-index: 2;
 	transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
 		0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
 

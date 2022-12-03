@@ -91,54 +91,12 @@ function animateSliders() {
 
 animateSliders();
 
-//==> Cursor Animation by using Babel:
+//==> Cursor Animation by using gsap:
 
-//=>With CursorJS:
-
-// const navBurger = document.querySelector('.burger-nav');
-
-// const configCursor = {
-// 	speed: 0.5,
-// 	className: 'customCursor',
-// 	style: {
-// 		width: '15px',
-// 		heigth: '15px',
-// 		borderRadius: '50%',
-// 		backgroundColor: '#fff',
-// 	},
-
-// 	hover: [
-// 		// text:
-// 		{
-// 			selector: 'p ',
-// 			in: {
-// 				borderRadius: '50%',
-// 				width: '2px',
-// 				heigth: '50px',
-// 				backgroundColor: '#fff',
-// 			},
-// 		},
-
-// 		//Other elements:
-// 		{
-// 			selector: 'a, button, img, h1, h2, h3',
-// 			magnetic: true,
-// 			in: (data) => {
-// 				gsap.to(data.cursor, 0.3, {
-// 					width: '10rem',
-// 					height: '10rem',
-// 					borderRadius: '50%',
-// 					backgroundColor: '#fff',
-// 				});
-// 			},
-// 		},
-// 	],
-// };
-
-// const cursor = new Cursor(configCursor);
+// Selectors:
 const cursor = document.querySelector('.cursor');
 const follower = document.querySelector('.cursor-follower');
-const hoverables = document.querySelectorAll('.hoverable , img, .title, h1, a');
+const hoverables = document.querySelectorAll('img, .title, h1, a, h3');
 
 // set the initials values of 2D axis:
 var posX = 0,
@@ -170,6 +128,7 @@ TweenMax.to({}, 0.016, {
 	},
 });
 
+// Listeners with Functions:
 document.addEventListener('mousemove', (e) => {
 	mouseX = e.pageX;
 	mouseY = e.pageY;
@@ -192,7 +151,48 @@ hoverables.forEach((element) => {
 		follower.classList.remove('active');
 
 		if (element.classList.contains('explore')) {
-			gsap.to('.title-swipe', 1, { y: '100%' });
+			gsap.to('.title-swipe', 1, { y: '120%' });
 		}
 	});
 });
+
+//===> Burger Navbar Toggle:
+
+// Selectors:
+const burgerNav = document.querySelector('.burger-nav');
+
+// Functions:
+function navToggler(e) {
+	if (!e.target.classList.contains('active')) {
+		e.target.classList.add('active');
+		gsap.to('.line1', 0.5, { rotate: '45', y: 7.5, background: 'black' });
+		gsap.to('.line2', 0.5, {
+			rotate: '-45',
+			y: -7.5,
+			width: '3rem',
+			background: 'black',
+		});
+		gsap.to('.line3', 0.5, { scale: 0 });
+
+		gsap.to('#logo', 1, { color: 'black' });
+
+		gsap.to('.navbar', 1, { clipPath: 'circle(2500px at 100% -10%)' });
+	} else {
+		e.target.classList.remove('active');
+		gsap.to('.line1', 0.5, { rotate: '0', y: 0, background: 'white' });
+		gsap.to('.line2', 0.5, {
+			rotate: '0',
+			y: 0,
+			width: '2.2rem',
+			background: 'white',
+		});
+		gsap.to('.line3', 0.5, { scale: 1 });
+
+		gsap.to('#logo', 1, { color: 'white' });
+
+		gsap.to('.navbar', 1, { clipPath: 'circle(50px at 100% -10%)' });
+	}
+}
+
+// Listeners:
+burgerNav.addEventListener('click', navToggler);

@@ -31,6 +31,8 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #fff;
+  z-index: 2;
+  position: relative;
 }
 
 header #logo {
@@ -43,7 +45,24 @@ header #logo {
 }
 
 header .burger-nav {
-  pointer-events: none;
+  pointer-events: all;
+  width: 6rem;
+  height: 6rem;
+  padding-left: 0.8rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 header .burger-nav .line1 {
@@ -136,8 +155,8 @@ header .burger-nav .line3 {
   left: 0;
   position: absolute;
   mix-blend-mode: darken;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(120%) rotate(-5deg) scale(2);
+          transform: translateY(120%) rotate(-5deg) scale(2);
 }
 
 .slide .hero-description .title .t-swipe1 {
@@ -206,7 +225,7 @@ header .burger-nav .line3 {
   position: fixed;
   top: 0;
   left: 0;
-  background: #fff;
+  background: #e8b95f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,7 +278,7 @@ header .burger-nav .line3 {
   height: 8px;
   border-radius: 100%;
   mix-blend-mode: difference;
-  z-index: 1;
+  z-index: 2;
   -webkit-transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
   transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
   transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
