@@ -90,3 +90,96 @@ function animateSliders() {
 }
 
 animateSliders();
+
+//==> Cursor Animation by using Babel:
+
+//=>With CursorJS:
+
+// const navBurger = document.querySelector('.burger-nav');
+
+// const configCursor = {
+// 	speed: 0.5,
+// 	className: 'customCursor',
+// 	style: {
+// 		width: '15px',
+// 		heigth: '15px',
+// 		borderRadius: '50%',
+// 		backgroundColor: '#fff',
+// 	},
+
+// 	hover: [
+// 		// text:
+// 		{
+// 			selector: 'p ',
+// 			in: {
+// 				borderRadius: '50%',
+// 				width: '2px',
+// 				heigth: '50px',
+// 				backgroundColor: '#fff',
+// 			},
+// 		},
+
+// 		//Other elements:
+// 		{
+// 			selector: 'a, button, img, h1, h2, h3',
+// 			magnetic: true,
+// 			in: (data) => {
+// 				gsap.to(data.cursor, 0.3, {
+// 					width: '10rem',
+// 					height: '10rem',
+// 					borderRadius: '50%',
+// 					backgroundColor: '#fff',
+// 				});
+// 			},
+// 		},
+// 	],
+// };
+
+// const cursor = new Cursor(configCursor);
+const cursor = document.querySelector('.cursor');
+const follower = document.querySelector('.cursor-follower');
+const hoverables = document.querySelectorAll('.hoverable , img, .title, h1, a');
+
+var posX = 0,
+	posY = 0,
+	mouseX = 0,
+	mouseY = 0;
+
+TweenMax.to({}, 0.016, {
+	repeat: -1,
+	onRepeat: function () {
+		posX += (mouseX - posX) / 9;
+		posY += (mouseY - posY) / 9;
+
+		TweenMax.set(follower, {
+			css: {
+				left: posX - 20,
+				top: posY - 20,
+			},
+		});
+
+		TweenMax.set(cursor, {
+			css: {
+				left: mouseX,
+				top: mouseY,
+			},
+		});
+	},
+});
+
+document.addEventListener('mousemove', (e) => {
+	mouseX = e.pageX;
+	mouseY = e.pageY;
+});
+
+hoverables.forEach((el) => {
+	el.addEventListener('mouseenter', () => {
+		cursor.classList.add('active');
+		follower.classList.add('active');
+	});
+
+	el.addEventListener('mouseleave', () => {
+		cursor.classList.remove('active');
+		follower.classList.remove('active');
+	});
+});

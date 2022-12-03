@@ -21,6 +21,8 @@ body {
 
 	background: #0e0e0e;
 	overflow-x: hidden;
+
+	cursor: none;
 }
 
 header {
@@ -219,24 +221,72 @@ header {
 	}
 }
 
-.cursor {
-	pointer-events: none;
+.scrollmagic-pin-spacer {
+	position: static !important;
+}
 
-	&__ball {
-		position: fixed;
+// Cursor style:
+.cursor {
+	position: absolute;
+	background: rgb(255, 255, 255);
+	cursor: pointer;
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+
+	mix-blend-mode: difference;
+
+	z-index: 1;
+	transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+		0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+
+	user-select: none;
+	pointer-events: none;
+	transform: scale(0.8);
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
 		top: 0;
 		left: 0;
+		display: block;
 
-		mix-blend-mode: difference;
+		border-radius: 100%;
 
-		z-index: 1000;
-
-		circle {
-			fill: #f7f8fa;
-		}
+		opacity: 0;
 	}
 }
 
-.scrollmagic-pin-spacer {
-	position: static !important;
+.active {
+	opacity: 1;
+	transform: scale(14);
+
+	&::before {
+		opacity: 1;
+	}
+}
+
+.cursor-follower {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+
+	mix-blend-mode: difference;
+
+	z-index: 1;
+	background-color: rgb(255, 255, 255);
+	transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+		0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+
+	user-select: none;
+	pointer-events: none;
+	transform: translate(4px, 4px);
+}
+
+.cursor-follower.active {
+	opacity: 0.3;
+	transform: scale(0);
 }
