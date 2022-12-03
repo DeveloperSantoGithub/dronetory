@@ -140,17 +140,20 @@ const cursor = document.querySelector('.cursor');
 const follower = document.querySelector('.cursor-follower');
 const hoverables = document.querySelectorAll('.hoverable , img, .title, h1, a');
 
+// set the initials values of 2D axis:
 var posX = 0,
 	posY = 0,
 	mouseX = 0,
 	mouseY = 0;
 
+// Create Animation with gsap TweenMax:
 TweenMax.to({}, 0.016, {
 	repeat: -1,
 	onRepeat: function () {
 		posX += (mouseX - posX) / 9;
 		posY += (mouseY - posY) / 9;
 
+		// Set TweenMax:
 		TweenMax.set(follower, {
 			css: {
 				left: posX - 20,
@@ -172,13 +175,13 @@ document.addEventListener('mousemove', (e) => {
 	mouseY = e.pageY;
 });
 
-hoverables.forEach((el) => {
-	el.addEventListener('mouseenter', () => {
+hoverables.forEach((element) => {
+	element.addEventListener('mouseenter', () => {
 		cursor.classList.add('active');
 		follower.classList.add('active');
 	});
 
-	el.addEventListener('mouseleave', () => {
+	element.addEventListener('mouseleave', () => {
 		cursor.classList.remove('active');
 		follower.classList.remove('active');
 	});
