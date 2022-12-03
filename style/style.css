@@ -109,6 +109,8 @@ header .burger-nav .line3 {
 }
 
 .slide .hero-description .title {
+  position: relative;
+  overflow: hidden;
   font-size: 5rem;
   font-weight: 800;
   font-family: 'Big Shoulders Text', cursive;
@@ -120,11 +122,34 @@ header .burger-nav .line3 {
 }
 
 .slide .hero-description .title .secondSpan {
-  color: #0099dd;
+  color: #40f9ff;
 }
 
 .slide .hero-description .title .thirdSpan {
   color: #ff6b1a;
+}
+
+.slide .hero-description .title .title-swipe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  mix-blend-mode: darken;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.slide .hero-description .title .t-swipe1 {
+  background-color: #5639bf;
+}
+
+.slide .hero-description .title .t-swipe2 {
+  background-color: #40f9ff;
+}
+
+.slide .hero-description .title .t-swipe3 {
+  background-color: #ff6b1a;
 }
 
 .slide .hero-description p {
@@ -226,10 +251,6 @@ header .burger-nav .line3 {
   line-height: 2rem;
 }
 
-.scrollmagic-pin-spacer {
-  position: static !important;
-}
-
 .cursor {
   position: absolute;
   background: white;
@@ -287,5 +308,9 @@ header .burger-nav .line3 {
   opacity: 0.3;
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
 }
 /*# sourceMappingURL=style.css.map */

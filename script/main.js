@@ -179,10 +179,20 @@ hoverables.forEach((element) => {
 	element.addEventListener('mouseenter', () => {
 		cursor.classList.add('active');
 		follower.classList.add('active');
+
+		if (element.classList.contains('explore')) {
+			gsap.to('.title-swipe', 1, {
+				y: '0%',
+			});
+		}
 	});
 
 	element.addEventListener('mouseleave', () => {
 		cursor.classList.remove('active');
 		follower.classList.remove('active');
+
+		if (element.classList.contains('explore')) {
+			gsap.to('.title-swipe', 1, { y: '100%' });
+		}
 	});
 });
