@@ -364,6 +364,7 @@ body.hide {
   min-height: 100vh;
   margin: auto;
   margin-top: -5rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,12 +376,12 @@ body.hide {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position: relative;
   color: #fff;
 }
 
 .droneSlide-details .droneImg {
   height: 75vh;
+  width: 35rem;
   -ms-flex-preferred-size: 35rem;
       flex-basis: 35rem;
 }
@@ -418,24 +419,36 @@ body.hide {
 }
 
 .droneSlide-details .dronecase-text .dn3 {
-  color: #ff6b1a;
+  color: #c7513b;
 }
 
 .droneSlide-details .dronecase-text p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
-  line-height: 2rem;
-  padding: 2rem 3.5rem 0 0;
+  padding: 2rem 4rem 0 0;
   margin-bottom: 10rem;
+  line-height: 2rem;
 }
 
 .droneSlide-details .drone-nr {
   position: absolute;
-  font-size: 15rem;
-  left: 42%;
+  left: 40%;
   bottom: 10%;
+  font-size: 15rem;
   font-family: 'Poiret One', cursive;
   opacity: 0.2;
-  color: #fff;
+  color: #5ebf88;
+}
+
+.droneSlide-details .drone-nr1 {
+  color: #5ebf88;
+}
+
+.droneSlide-details .drone-nr2 {
+  color: #0099dd;
+}
+
+.droneSlide-details .drone-nr3 {
+  color: #c7513b;
 }
 /*# sourceMappingURL=style.css.map */
