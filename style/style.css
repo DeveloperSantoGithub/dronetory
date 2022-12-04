@@ -10,6 +10,11 @@
           box-sizing: border-box;
 }
 
+a {
+  pointer-events: all;
+  text-decoration: none;
+}
+
 body {
   background: #0e0e0e;
   overflow-x: hidden;
@@ -329,7 +334,7 @@ header .burger-nav .line3 {
           transform: scale(0);
 }
 
-.hide {
+body.hide {
   overflow: hidden;
 }
 
@@ -352,5 +357,85 @@ header .burger-nav .line3 {
 ::-webkit-scrollbar-thumb {
   background: #252525;
   border-radius: 100vw;
+}
+
+.droneSlide-details {
+  width: 85%;
+  min-height: 100vh;
+  margin: auto;
+  margin-top: -5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  color: #fff;
+}
+
+.droneSlide-details .droneImg {
+  height: 75vh;
+  -ms-flex-preferred-size: 35rem;
+      flex-basis: 35rem;
+}
+
+.droneSlide-details .droneImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.droneSlide-details .dronecase-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 25rem;
+      flex-basis: 25rem;
+  position: relative;
+}
+
+.droneSlide-details .dronecase-text h1 {
+  font-size: 6rem;
+  font-family: 'Poiret One', cursive;
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+.droneSlide-details .dronecase-text .dn1 {
+  color: #5ebf88;
+}
+
+.droneSlide-details .dronecase-text .dn2 {
+  color: #0099dd;
+}
+
+.droneSlide-details .dronecase-text .dn3 {
+  color: #ff6b1a;
+}
+
+.droneSlide-details .dronecase-text p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 2rem 3.5rem 0 0;
+  margin-bottom: 10rem;
+}
+
+.droneSlide-details .drone-nr {
+  position: absolute;
+  font-size: 15rem;
+  left: 42%;
+  bottom: 10%;
+  font-family: 'Poiret One', cursive;
+  opacity: 0.2;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

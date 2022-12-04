@@ -200,3 +200,7 @@ function navToggler(e) {
 
 // Listeners:
 burgerNav.addEventListener('click', navToggler);
+
+const explore = document.querySelector('.explore');
+
+console.log(explore);
