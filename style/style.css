@@ -329,7 +329,28 @@ header .burger-nav .line3 {
           transform: scale(0);
 }
 
+.hide {
+  overflow: hidden;
+}
+
 .scrollmagic-pin-spacer {
   position: static !important;
+}
+
+::-webkit-scrollbar {
+  width: 0.7em;
+  height: 2em;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100vw;
+  background: #b1aaaa;
+  margin-block: 0.5em;
+  margin-inline: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252525;
+  border-radius: 100vw;
 }
 /*# sourceMappingURL=style.css.map */
