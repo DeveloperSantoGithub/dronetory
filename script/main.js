@@ -292,10 +292,10 @@ barba.init({
 				logo.href = './index.html';
 			},
 			beforeLeave() {
+				cursorAnimation().destroy();
 				sliderScene.destroy();
 				homePageScene.destroy();
 				controller.destroy();
-				cursorAnimation().destroy();
 			},
 		},
 		{
@@ -315,6 +315,7 @@ barba.init({
 			},
 			beforeLeave() {
 				cursorAnimation().destroy();
+				detailsPageScene.destroy();
 				controller.destroy();
 			},
 		},
