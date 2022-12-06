@@ -191,6 +191,8 @@ body {
 
 main {
   position: absolute;
+  -webkit-margin-before: -8rem;
+          margin-block-start: -8rem;
 }
 
 header {
