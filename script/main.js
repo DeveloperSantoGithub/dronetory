@@ -134,7 +134,7 @@ function droneDitailsAnimation() {
 
 		sliderTimeline.fromTo(
 			nextText,
-			{ x: '-50%', y: '-50%' },
+			{ x: '-100%', y: '-50%' },
 			{ x: '0%', y: '0%' },
 			'-= 0.5'
 		);
@@ -305,13 +305,6 @@ barba.init({
 				droneDitailsAnimation();
 
 				logo.href = '../index.html';
-
-				gsap.fromTo(
-					'.nav-header',
-					1,
-					{ y: '-100%' },
-					{ y: '0%', ease: 'power2.inOut' }
-				);
 			},
 			beforeLeave() {
 				cursorAnimation().destroy();
@@ -363,6 +356,14 @@ barba.init({
 				});
 
 				fadeTimeline.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
+
+				// Navbar Animation:
+				fadeTimeline.fromTo(
+					'.nav-header',
+					1,
+					{ y: '-100%' },
+					{ y: '0%', ease: 'power2.inOut' }
+				);
 
 				// swipe animations:
 				fadeTimeline.fromTo(
