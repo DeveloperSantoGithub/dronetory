@@ -41,7 +41,7 @@ function animateSliders() {
 		sliderTimeline.fromTo(revealImg, { x: '0%' }, { x: '100%' });
 		sliderTimeline.fromTo(img, { scale: 2 }, { scale: 1 }, '-=1');
 		sliderTimeline.fromTo(revealText, { x: '0%' }, { x: '100%' }, '-=0.75');
-		sliderTimeline.fromTo(headerNav, { y: '-100%' }, { y: '0%' }, '-= 0.5');
+		sliderTimeline.fromTo(headerNav, { y: '-100%' }, { y: '0%' }, '-=0.5');
 
 		//Create Slider Scene:
 		sliderScene = new ScrollMagic.Scene({
@@ -123,7 +123,7 @@ function droneDitailsAnimation() {
 			nextDetailsSlider,
 			{ opacity: 0 },
 			{ opacity: 1 },
-			'-= 1'
+			'-=1'
 		);
 
 		sliderTimeline.fromTo(
@@ -136,7 +136,7 @@ function droneDitailsAnimation() {
 			nextText,
 			{ x: '-100%', y: '-50%' },
 			{ x: '0%', y: '0%' },
-			'-= 0.5'
+			'-=0.5'
 		);
 
 		// Create Scene:
@@ -339,7 +339,7 @@ barba.init({
 					0.75,
 					{ x: '-100%' },
 					{ x: '0%', onComplete: done },
-					'-= 0.5'
+					'-=0.5'
 				);
 			},
 
@@ -371,7 +371,7 @@ barba.init({
 					0.75,
 					{ x: '0%' },
 					{ x: '100%', stagger: 0.3, onComplete: done },
-					'-= 0.5'
+					'-=0.5'
 				);
 			},
 		},
