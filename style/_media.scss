@@ -1,0 +1,215 @@
+@media screen and (max-width: 1500px) {
+	main {
+		.droneSlide-details {
+			.dronecase-text {
+				h1 {
+					// font-size: 2.5rem;
+					margin-bottom: 1.5rem;
+				}
+				P {
+				}
+			}
+
+			.droneImg {
+				height: 75vh;
+				width: 35rem;
+				flex-basis: 35rem;
+				margin-bottom: 5rem;
+			}
+
+			.drone-nr {
+				font-size: 12rem;
+				bottom: 12%;
+				left: 30%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	main {
+		width: 100%;
+		margin: 0;
+
+		.slide {
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin-top: 5rem;
+
+			.hero-img {
+				padding: 2rem;
+				img {
+					width: 100%;
+				}
+			}
+
+			.hero-description {
+				padding: 0;
+
+				.title {
+					font-size: 1.6rem;
+					padding: 1rem 0rem;
+				}
+
+				p {
+					padding: 2rem 1rem;
+					font-size: 1rem;
+					line-height: 1.5rem;
+					text-align: center;
+				}
+
+				.explore {
+					width: 60%;
+					margin: auto;
+				}
+			}
+		}
+
+		.droneSlide-details {
+			.dronecase-text {
+				h1 {
+					font-size: 2.5rem;
+					margin-bottom: 1.5rem;
+				}
+				P {
+					font-size: 1rem;
+					padding: 0;
+					margin: auto;
+					margin-bottom: 1.5rem;
+				}
+			}
+
+			.droneImg {
+				height: 45vh;
+				width: 35rem;
+				flex-basis: 35rem;
+				margin-bottom: 10rem;
+			}
+
+			.drone-nr {
+				font-size: 8rem;
+
+				bottom: 18%;
+				left: 5%;
+			}
+		}
+	}
+
+	.navbar {
+		display: flex;
+		flex-direction: column;
+
+		.nav-links {
+			margin-top: 10rem;
+			flex-basis: 25rem !important;
+			font-size: 2rem;
+			text-align: center;
+		}
+
+		.contact {
+			margin: 0;
+			h3 {
+				font-size: 2rem;
+
+				text-align: center;
+			}
+
+			p {
+				font-size: 1.2rem;
+				padding: 2rem;
+				text-align: center;
+			}
+		}
+	}
+}
+
+// @media screen and (max-width: 900px) {
+// }
+// @media screen and (max-width: 768px) {
+// }
+@media screen and (max-width: 500px) {
+	body {
+		header {
+			padding: 1rem 0rem;
+			margin: -1rem auto;
+
+			.burger-nav {
+				padding-left: 1.8rem;
+			}
+			h1 {
+				#logo {
+					font-size: 2.5rem;
+					letter-spacing: 0.7rem;
+				}
+			}
+
+			.burger-nav {
+				padding-left: 2rem;
+			}
+		}
+
+		.cursor {
+			display: none;
+		}
+		.cursor-follower {
+			display: none;
+		}
+
+		.navbar {
+			.nav-links {
+				font-size: 2rem;
+
+				h3 {
+					margin: 2rem 0;
+				}
+			}
+
+			.contact {
+				h3 {
+					font-size: 3rem;
+				}
+
+				P {
+					font-size: 1rem;
+					padding: 2rem;
+					line-height: 1.5rem;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	main {
+		overflow: hidden;
+		margin-top: -5px;
+
+		.slide {
+			.hero-img {
+				padding: 5rem 1rem 0 1rem;
+			}
+		}
+
+		.droneSlide-details {
+			overflow: hidden;
+
+			.droneImg {
+				height: 50vh;
+			}
+
+			.dronecase-text {
+				margin-top: 2rem;
+
+				h1 {
+					font-size: 2rem;
+					margin-bottom: 1rem;
+				}
+				p {
+					font-size: 1rem;
+					margin-bottom: 2rem;
+					line-height: 1.5rem;
+				}
+			}
+		}
+	}
+}
