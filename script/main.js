@@ -370,8 +370,8 @@ barba.init({
 					'.swipe',
 					0.75,
 					{ x: '0%' },
-					{ x: '100%', stagger: 0.3, onComplete: done },
-					'-=0.5'
+					{ x: '100%', stagger: 0.2, onComplete: done },
+					'-=2'
 				);
 			},
 		},
