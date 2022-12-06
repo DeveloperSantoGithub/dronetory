@@ -74,7 +74,7 @@ function animateSliders() {
 			{ opacity: 1, scale: 1 },
 			{ opacity: 0, scale: 0.5 }
 		);
-		pageTimeline.fromTo(nextSlider, { y: '50%' }, { y: '0%' }, '-= 0.5');
+		pageTimeline.fromTo(nextSlider, { y: '50%' }, { y: '0%' }, '-=0.5');
 
 		// Create Page Scene:
 		homePageScene = new ScrollMagic.Scene({
