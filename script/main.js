@@ -50,11 +50,11 @@ function animateSliders() {
 			reverse: false,
 		})
 			.setTween(sliderTimeline)
-			.addIndicators({
-				colorStart: 'lightgreen',
-				colorTrigger: 'orange',
-				name: 'slider',
-			})
+			// .addIndicators({
+			// 	colorStart: 'lightgreen',
+			// 	colorTrigger: 'orange',
+			// 	name: 'slider',
+			// })
 			.addTo(controller);
 
 		//-->>Home Page Animations Part:
@@ -84,12 +84,12 @@ function animateSliders() {
 		})
 			.setPin(slider, { pushFollowers: false })
 			.setTween(pageTimeline)
-			.addIndicators({
-				colorStart: 'lightblue',
-				colorTrigger: 'white',
-				name: 'page',
-				indent: 200,
-			})
+			// .addIndicators({
+			// 	colorStart: 'lightblue',
+			// 	colorTrigger: 'white',
+			// 	name: 'page',
+			// 	indent: 200,
+			// })
 			.addTo(controller);
 	});
 }
@@ -147,12 +147,12 @@ function droneDitailsAnimation() {
 		})
 			.setPin(slider, { pushFollowers: false })
 			.setTween(sliderTimeline)
-			.addIndicators({
-				colorStart: 'lightblue',
-				colorTrigger: 'white',
-				name: 'page',
-				indent: 200,
-			})
+			// .addIndicators({
+			// 	colorStart: 'lightblue',
+			// 	colorTrigger: 'white',
+			// 	name: 'page',
+			// 	indent: 200,
+			// })
 			.addTo(controller);
 	});
 }
