@@ -272,6 +272,7 @@ header {
 // Cursor style:
 .cursor {
 	position: absolute;
+
 	overflow: hidden;
 
 	background: rgb(255, 255, 255);
@@ -334,6 +335,7 @@ body.hide {
 // Scroll Magic pin-spacer Bug Fixer:
 .scrollmagic-pin-spacer {
 	position: static !important;
+	// margin: 30px auto auto !important;
 }
 
 // Customize  Scrollbar:
@@ -356,6 +358,7 @@ body.hide {
 
 //|---->> Details Page style:
 .droneSlide-details {
+
 	width: 85%;
 	min-height: 100vh;
 
@@ -369,6 +372,7 @@ body.hide {
 	flex-wrap: wrap;
 
 	color: #fff;
+
 
 	.droneImg {
 		height: 75vh;
@@ -455,14 +459,14 @@ body.hide {
 	transform: translateX(-100%);
 }
 .swipe1 {
-	background: #c7513b;
+	background: #f1f1f1;
 	z-index: 5;
 }
 .swipe2 {
-	background: #5ebf88;
+	background: #0e0e0e;
 	z-index: 4;
 }
 .swipe3 {
-	background: #0099dd;
+	background: #f1f1f1;
 	z-index: 3;
 }

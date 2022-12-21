@@ -639,17 +639,17 @@ body.hide {
 }
 
 .swipe1 {
-  background: #c7513b;
+  background: #f1f1f1;
   z-index: 5;
 }
 
 .swipe2 {
-  background: #5ebf88;
+  background: #0e0e0e;
   z-index: 4;
 }
 
 .swipe3 {
-  background: #0099dd;
+  background: #f1f1f1;
   z-index: 3;
 }
 /*# sourceMappingURL=style.css.map */
